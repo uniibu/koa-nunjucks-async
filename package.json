@@ -1,0 +1,37 @@
+{
+  "name": "koa-nunjucks-async",
+  "version": "1.0.0",
+  "description": "A Nunjucks Renderer for Koa v2+ that uses native async/await of the latest Nodejs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "url": "uniibu/koa-nunjucks-async"
+  },
+  "keywords": [
+    "koa",
+    "nunjucks",
+    "async",
+    "await",
+    "koajs",
+    "koa-nunjucks",
+    "koa-nunjucks-render",
+    "koa-nunjucks-next"
+  ],
+  "author": "unibtc@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uniibu/koa-nunjucks-async/issues"
+  },
+  "homepage": "https://github.com/uniibu/koa-nunjucks-async#readme",
+  "dependencies": {
+    "nunjucks": "^3.0.1"
+  },
+  "devDependencies": {
+    "koa": "^2.3.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  }
+}
