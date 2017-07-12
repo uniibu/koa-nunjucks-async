@@ -5,6 +5,7 @@ A Nunjucks Renderer Middleware for KoaJs v2+ that uses native async/await of Nod
 [![Node version](https://img.shields.io/badge/Node-8.0.0-blue.svg)](http://nodejs.org/download/)
 [![Koajs deps](https://img.shields.io/badge/Koajs-2.3.0-brightgreen.svg)](https://github.com/koajs/koa)
 
+[![NPM](https://nodei.co/npm/koa-nunjucks-async.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/koa-nunjucks-async/)
 
 A Koa Middleware that allows you to render nunjucks templates. [![Nunjucks](https://img.shields.io/badge/Nunjucks-3.0.1-green.svg)](https://mozilla.github.io/nunjucks/)
 
