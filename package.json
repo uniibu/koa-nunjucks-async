@@ -4,7 +4,11 @@
   "description": "A Nunjucks Renderer for Koa v2+ that uses native async/await of the latest Nodejs",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags"
   },
   "repository": {
     "url": "uniibu/koa-nunjucks-async"
