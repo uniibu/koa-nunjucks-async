@@ -1,7 +1,27 @@
 {
   "extends": [
-    "config:base"
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":renovatePrefix",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":ignoreModulesAndTests",
+    ":maintainLockFilesDisabled",
+    ":autodetectPinVersions",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+
+    ":prNotPending",
+    ":preserveSemverRanges",
+    ":automergePatch",
+    ":pinDigestsDisabled",
+
+    "group:monorepos",
+    "helpers:disableTypesNodeMajor",
+    "helpers:oddIsUnstablePackages"
   ],
-  "prHourlyLimit": 10,
-  "preserveSemverRanges": true
+  "labels": ["chore"],
+  "rebaseStalePrs": true
 }
