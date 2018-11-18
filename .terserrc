@@ -1,0 +1,16 @@
+{
+  "compress": {
+    "booleans": false,
+    "keep_fnames": true
+  },
+  "mangle": {
+    "keep_fnames": true,
+    "module": true
+  },
+  "output": {
+    "comments": "some"
+  },
+  "ecma": 6,
+  "module": true,
+  "warnings": true
+}
