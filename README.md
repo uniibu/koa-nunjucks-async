@@ -2,12 +2,12 @@
 A Nunjucks Renderer Middleware for KoaJs v2+ that uses native async/await of Nodejs
 
 ------------
-[![Node version](https://img.shields.io/badge/Node-8.0.0-blue.svg)](http://nodejs.org/download/)
-[![Koajs deps](https://img.shields.io/badge/Koajs-2.3.0-brightgreen.svg)](https://github.com/koajs/koa)
-
+[![Node version](https://img.shields.io/badge/Node-8.10.0-blue.svg)](http://nodejs.org/download/)
+[![Koajs deps](https://img.shields.io/badge/Koajs-2.6.2-brightgreen.svg)](https://github.com/koajs/koa)
+[![Build Status](https://travis-ci.com/uniibu/koa-nunjucks-async.svg?branch=master)](https://travis-ci.com/uniibu/koa-nunjucks-async)
 [![NPM](https://nodei.co/npm/koa-nunjucks-async.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/koa-nunjucks-async/)
 
-A Koa Middleware that allows you to render nunjucks templates. [![Nunjucks](https://img.shields.io/badge/Nunjucks-3.0.1-green.svg)](https://mozilla.github.io/nunjucks/)
+A Koa Middleware that allows you to render nunjucks templates. [![Nunjucks](https://img.shields.io/badge/Nunjucks-3.1.4-green.svg)](https://mozilla.github.io/nunjucks/)
 
 Why Build this if you can use other repositories that also supports Koa@2 ?
 
@@ -21,6 +21,7 @@ Why Build this if you can use other repositories that also supports Koa@2 ?
 
 * ctx.state are also exposed automatically to all templates. However, ctx.state gets overwritten (just for that instance) in case the same name is passed via context.
 * This middlware also exposes nunjucks.renderString which can be called using `ctx.renderString('<p>{msg}</p>',{msg:'hello'})` it is the same as render, but renders a raw string instead of loading a template.
+* Async filters are accepted and allowed starting version `^1.1.0`
 
 Install
 =======
@@ -84,7 +85,7 @@ Usage
 
 ### You can use it with Koa's native routing:
 
-      const koa = require('koa');
+      const Koa = require('koa');
       const app = new Koa();
 
       app.use(async ctx => {
@@ -106,7 +107,7 @@ Usage
 
 ### Exposing variables other than context(ctx) by using ctx.state:
 
-      const koa = require('koa');
+      const Koa = require('koa');
       const app = new Koa();
 
       app.use(async (ctx,next) => {
@@ -124,4 +125,4 @@ Usage
 
 License
 =======
-This project is licensed under the MIT license. See the LICENSE file for more info.
+This project is licensed under the Apache license. See the LICENSE file for more info.
