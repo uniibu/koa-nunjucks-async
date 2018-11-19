@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "lint": "eslint --fix --ext .js .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
@@ -44,10 +44,13 @@
   "devDependencies": {
     "auto-changelog": "^1.10.2",
     "eslint": "^5.9.0",
+    "jest": "^23.6.0",
     "koa": "^2.5.3",
+    "koa-router": "^7.4.0",
+    "supertest": "^3.3.0",
     "terser": "^3.10.11"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 8.2.0"
   }
 }
