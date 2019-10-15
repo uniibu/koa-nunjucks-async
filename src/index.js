@@ -1,5 +1,5 @@
 /** @license
- * Copyright (c) 2018-present John Paul Sayo
+ * Copyright (c) 2019 John Paul Sayo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-'use strict';
 const nunjucks = require('nunjucks');
 const assert = require('assert');
 const { promisify } = require('util');
@@ -75,7 +74,7 @@ const destruct = (obj, fn, check) => {
   for (const name of Object.keys(obj)) {
     if (check && isAsync(obj[name])) {
       fn(name, asyncWrapper(obj[name]), true);
-    }else{
+    } else {
       fn(name, obj[name]);
     }
   }
@@ -92,8 +91,8 @@ const destruct = (obj, fn, check) => {
 const addCustom = (env, obj) => {
 
   destruct(obj.filters, (name, fn, o = false) => {
-    env.addFilter(name,fn, o);
-  },true);
+    env.addFilter(name, fn, o);
+  }, true);
   destruct(obj.globals, (name, fn) => {
     env.addGlobal(name, fn);
   });
@@ -123,7 +122,7 @@ const KoaNunjucks = (path, options = {}) => {
       context = Object.assign({}, ctx.state, context);
       view += options.ext;
       const body = await env.render(view, context);
-      ctx.type = ctx.type || 'text/html';
+      if (!ctx.type) ctx.type = 'text/html';
       ctx.body = body;
       return;
     };
