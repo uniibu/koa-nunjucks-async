@@ -1,5 +1,5 @@
 /** @license
- * Copyright (c) 2019 John Paul Sayo
+ * Copyright (c) 2019-present John Paul Sayo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+'use strict';
 const nunjucks = require('nunjucks');
 const assert = require('assert');
 const { promisify } = require('util');
@@ -119,11 +120,13 @@ const KoaNunjucks = (path, options = {}) => {
   addCustom(env, options);
   return async (ctx, next) => {
     ctx.render = async (view, context) => {
+      let type;
       context = Object.assign({}, ctx.state, context);
-      view += options.ext;
-      const body = await env.render(view, context);
-      if (!ctx.type) ctx.type = 'text/html';
-      ctx.body = body;
+      if (!ctx.type) {
+        type = 'text/html';
+      }
+      const body = await env.render(view + options.ext, context);
+      Object.assign(ctx, { type, body });
       return;
     };
     ctx.renderString = async (string, context) => {
