@@ -46,7 +46,7 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "koa": "^2.10.0",
-    "koa-router": "^7.4.0",
+    "koa-router": "^9.0.1",
     "supertest": "^4.0.2",
     "terser": "^4.3.9"
   },
