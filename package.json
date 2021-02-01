@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "auto-changelog": "^1.16.1",
-    "eslint": "^6.5.1",
+    "eslint": "^7.19.0",
     "jest": "^24.9.0",
     "koa": "^2.10.0",
     "koa-router": "^7.4.0",
