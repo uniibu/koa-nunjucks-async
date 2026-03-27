@@ -48,7 +48,7 @@
     "koa": "^2.10.0",
     "koa-router": "^7.4.0",
     "supertest": "^4.0.2",
-    "terser": "^4.3.9"
+    "terser": "^5.0.0"
   },
   "engines": {
     "node": ">= 8.2.0"
